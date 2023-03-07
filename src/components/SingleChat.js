@@ -16,7 +16,7 @@ import animationData from "../animations/typing.json";
 import InputEmoji from "react-input-emoji";
 import { IoMdSend } from "react-icons/io";
 
-const ENDPOINT = "https://chat-app-server-pipa.onrender.com";
+const ENDPOINT = "https://prasanth-chat-app-server.up.railway.app";
 
 var socket, selectedChatCompare;
 
@@ -61,7 +61,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
 
             setLoading(true)
 
-            const { data } = await axios.get(`https://chat-app-server-pipa.onrender.com/api/message/${selectedChat._id}`, config);
+            const { data } = await axios.get(`https://prasanth-chat-app-server.up.railway.app/api/message/${selectedChat._id}`, config);
             setMessages(data);
             setLoading(false);
 
@@ -109,7 +109,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
                     },
                 };
                 setNewMessage("");
-                const { data } = await axios.post("https://chat-app-server-pipa.onrender.com/api/message",
+                const { data } = await axios.post("https://prasanth-chat-app-server.up.railway.app/api/message",
                     {
                         content: newMessage,
                         chatId: selectedChat._id,

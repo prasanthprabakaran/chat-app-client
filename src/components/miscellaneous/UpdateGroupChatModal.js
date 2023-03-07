@@ -29,7 +29,7 @@ const UpdateGroupChatModal = ({ fetchAgain, setFetchAgain, fetchMessages }) => {
                     Authorization: `Bearer ${user.token}`,
                 },
             };
-            const { data } = await axios.put("https://chat-app-server-pipa.onrender.com/api/chat/rename", {
+            const { data } = await axios.put("https://prasanth-chat-app-server.up.railway.app/api/chat/rename", {
                 chatId: selectedChat._id,
                 chatName: groupChatName,
             },
@@ -55,7 +55,7 @@ const UpdateGroupChatModal = ({ fetchAgain, setFetchAgain, fetchMessages }) => {
                     Authorization: `Bearer ${user.token}`,
                 },
             };
-            const { data } = await axios.get(`https://chat-app-server-pipa.onrender.com/api/user?search=${event.target.value}`, config)
+            const { data } = await axios.get(`https://prasanth-chat-app-server.up.railway.app/api/user?search=${event.target.value}`, config)
             setLoading(false);
             setSearchResult(data);
         } catch (error) {
@@ -101,7 +101,7 @@ const UpdateGroupChatModal = ({ fetchAgain, setFetchAgain, fetchMessages }) => {
                     Authorization: `Bearer ${user.token}`,
                 },
             };
-            const { data } = await axios.put('https://chat-app-server-pipa.onrender.com/api/chat/groupadd', {
+            const { data } = await axios.put('https://prasanth-chat-app-server.up.railway.app/api/chat/groupadd', {
                 chatId: selectedChat._id,
                 userId: userToAdd._id,
             }, config);

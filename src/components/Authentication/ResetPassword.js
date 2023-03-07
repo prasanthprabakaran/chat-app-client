@@ -58,7 +58,7 @@ const ResetPassword = () => {
             };
 
             const { data } = await axios.post(
-                `https://chat-app-server-pipa.onrender.com/api/user/reset-password/${id}/${token}`,
+                `https://prasanth-chat-app-server.up.railway.app/api/user/reset-password/${id}/${token}`,
                 { password: newPassword },
                 config
             );

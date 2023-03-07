@@ -53,7 +53,7 @@ const SideDrawer = () => {
           Authorization: `Bearer ${user.token}`,
         },
       };
-      const { data } = await axios.get(`https://chat-app-server-pipa.onrender.com/api/user?search=${search}`, config);
+      const { data } = await axios.get(`https://prasanth-chat-app-server.up.railway.app/api/user?search=${search}`, config);
       setLoading(false);
       setSearchResult(data);
     }
@@ -80,7 +80,7 @@ const SideDrawer = () => {
         },
       };
 
-      const { data } = await axios.post('https://chat-app-server-pipa.onrender.com/api/chat', { userId }, config);
+      const { data } = await axios.post('https://prasanth-chat-app-server.up.railway.app/api/chat', { userId }, config);
 
       if (!chats.find((c) => c._id === data._id)) {
         setChats([data, ...chats]);

@@ -44,7 +44,7 @@ const Login = () => {
             };
 
             const { data } = await axios.post(
-                "https://chat-app-server-pipa.onrender.com/api/user/login",
+                "https://prasanth-chat-app-server.up.railway.app/api/user/login",
                 { email, password },
                 config
             );
