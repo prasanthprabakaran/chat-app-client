@@ -1,0 +1,32 @@
+.messages {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    scrollbar-width: none;
+    overflow-x: none;    
+}
+
+.ownMessage {
+    background-color: #BEE3F8;
+    border-radius: 10px;
+    padding: 5px 15px;
+    max-width: 75%;
+    align-self: flex-end;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.message {
+    background-color: #B9F5D0;
+    border-radius: 10px;
+    padding: 5px 15px;
+    display: flex;
+    width: fit-content;
+    max-width: 75%;    
+}
+
+.messageFeed{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;       
+}  
