@@ -99,7 +99,7 @@ const Login = () => {
             </FormControl>
 
             <Button colorScheme="teal" width="100%" style={{ marginTop: 15 }} onClick={submitHandler} isLoading={loading}>Login</Button>
-            <Button variant="solid" colorScheme="yellow" width="100%" style={{ marginTop: 15 }} onClick={() => { setEmail("guest@example.com"); setPassword("123456") }}>Get Guest user credentials</Button>
+            <Button variant="solid" colorScheme="yellow" width="100%" style={{ marginTop: 15 }} onClick={() => { setEmail("test02@gmail.com"); setPassword("123456") }}>Get Guest user credentials</Button>
         </VStack>
     )
 }
