@@ -44,7 +44,7 @@ const Login = () => {
             };
 
             const { data } = await axios.post(
-                "http://localhost:5000/api/user/login",
+                "https://chat-app-server-pipa.onrender.com/api/user/login",
                 { email, password },
                 config
             );

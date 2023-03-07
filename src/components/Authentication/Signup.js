@@ -110,7 +110,7 @@ const Signup = () => {
             };
 
             const { data } = await axios.post(
-                "http://localhost:5000/api/user",
+                "https://chat-app-server-pipa.onrender.com/api/user",
                 { name, email, password, pic },
                 config
             );

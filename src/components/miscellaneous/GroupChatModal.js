@@ -43,7 +43,7 @@ const GroupChatModal = ({ children }) => {
                     Authorization: `Bearer ${user.token}`,
                 },
             };
-            const { data } = await axios.get(`http://localhost:5000/api/user?search=${event.target.value}`, config)
+            const { data } = await axios.get(`https://chat-app-server-pipa.onrender.com/api/user?search=${event.target.value}`, config)
             setLoading(false);
             setSearchResult(data);
         } catch (error) {
@@ -75,7 +75,7 @@ const GroupChatModal = ({ children }) => {
                     Authorization: `Bearer ${user.token}`,
                 },
             };
-            const { data } = await axios.post("http://localhost:5000/api/chat/group", {
+            const { data } = await axios.post("https://chat-app-server-pipa.onrender.com/api/chat/group", {
                 name: groupChatName,
                 users:JSON.stringify(selectedUsers.map((u) => u._id))
             }, config);

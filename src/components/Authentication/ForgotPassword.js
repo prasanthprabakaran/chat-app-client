@@ -40,7 +40,7 @@ const ForgotPassword = () => {
             };
 
             const { data } = await axios.post(
-                "http://localhost:5000/api/user/forgot-password",
+                "https://chat-app-server-pipa.onrender.com/api/user/forgot-password",
                 { email },
                 config
             );

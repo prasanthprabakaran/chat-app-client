@@ -58,7 +58,7 @@ const ResetPassword = () => {
             };
 
             const { data } = await axios.post(
-                `http://localhost:5000/api/user/reset-password/${id}/${token}`,
+                `https://chat-app-server-pipa.onrender.com/api/user/reset-password/${id}/${token}`,
                 { password: newPassword },
                 config
             );
